@@ -16,7 +16,7 @@ export async function updateUserProfileAction(formData: FormData) {
 
   let photo_url = null;
   if (imageFile && imageFile.size > 0) {
-    photo_url = await uploadImageAsset("profiles", user.id, imageFile);
+    photo_url = await uploadImageAsset("profiles" as never, user.id, imageFile);
   }
 
   const updatePayload: Record<string, unknown> = {
