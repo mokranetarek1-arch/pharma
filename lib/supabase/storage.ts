@@ -11,7 +11,7 @@ function getExtension(file: File) {
   return "jpg";
 }
 
-export async function uploadImageAsset(folder: "pharmacies" | "medicines" | "doctors", ownerId: string, file: File) {
+export async function uploadImageAsset(folder: "profiles" | "pharmacies" | "medicines" | "doctors", ownerId: string, file: File) {
   if (!file || file.size === 0) {
     return null;
   }
